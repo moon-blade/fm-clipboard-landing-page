@@ -1,0 +1,59 @@
+.download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  &__logo {
+    margin-bottom: rem(75px);
+  }
+
+  &__heading {
+    margin-bottom: rem(25px);
+  }
+
+  &__description {
+    margin-bottom: rem(50px);
+  }
+
+  &__button {
+    cursor: pointer;
+    transition: opacity 150ms ease-in-out;
+    &:hover {
+      opacity: 0.75;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-size: var(--fs-button-link);
+      font-weight: 600;
+    }
+    color: #ffffff;
+    border-radius: rem(50px);
+    padding: rem(22px) rem(80px);
+
+    &:not(:last-child) {
+      margin-bottom: rem(24px);
+    }
+  }
+
+  .green-button {
+    background-color: $strongCyan;
+  }
+
+  .blue-button {
+    background-color: $lightBlue;
+  }
+}
+
+@include for-desktop-up {
+  .download__buttons {
+    display: flex;
+    .download__button {
+      padding: rem(22px) rem(36px);
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: rem(16px);
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+footer {
+  .footer {
+    background-color: hsl(201, 11%, 95%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: rem(50px) rem(110px);
+
+    &__logo {
+      img {
+        max-width: rem(55px);
+        max-height: rem(55px);
+      }
+      margin-bottom: rem(50px);
+    }
+
+    &__links {
+      ul {
+        list-style-type: none;
+        text-align: center;
+        li {
+          font-size: rem(14px);
+          color: $darkGrayishBlue;
+          &:not(:last-child) {
+            margin-bottom: rem(35px);
+          }
+          &:hover {
+            color: $strongCyan;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    &__social {
+      margin-top: rem(55px);
+      i {
+        &:hover {
+          color: $strongCyan;
+          cursor: pointer;
+        }
+      }
+      i:not(:last-child) {
+        margin-right: rem(40px);
+      }
+    }
+  }
+}
+@include for-desktop-up {
+  footer {
+    .footer {
+      padding: rem(45px) rem(165px);
+      display: grid;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: 0.65fr 2fr 1fr;
+      grid-template-rows: 1fr;
+      &__logo {
+        margin-bottom: 0;
+      }
+      &__links {
+        ul {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: repeat(2, 1fr);
+          row-gap: rem(25px);
+          grid-template-areas:
+            'faqs pripol insgui'
+            'conus prekit empty';
+
+          li {
+            text-align: left;
+            &:not(:last-child) {
+              margin-bottom: 0;
+            }
+          }
+
+          .li1 {
+            grid-area: faqs;
+          }
+          .li2 {
+            grid-area: conus;
+          }
+          .li3 {
+            grid-area: pripol;
+          }
+          .li4 {
+            grid-area: prekit;
+          }
+        }
+      }
+      &__social {
+        text-align: right;
+        margin-top: 0;
+        display: flex;
+        justify-content: flex-end;
+        i:not(:last-child) {
+          margin-right: rem(25px);
+        }
+      }
+    }
+  }
+}

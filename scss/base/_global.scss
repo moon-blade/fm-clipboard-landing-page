@@ -1,0 +1,43 @@
+// body / main styles
+body {
+  background-image: url(../images/bg-header-mobile.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: var(--fs-body);
+}
+main {
+  padding: rem(120px) rem(30px) rem(170px) rem(30px);
+}
+@include for-tablet-portrait-up {
+  body {
+    background-image: url(../images/bg-header-desktop.png);
+  }
+}
+@include for-desktop-up {
+  main {
+    padding: rem(130px) rem(165px) rem(150px) rem(165px);
+  }
+}
+// fonts
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: 600;
+  color: $darkGrayishBlue;
+}
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  color: $darkGrayishBlue;
+}
+h3 {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: $darkGrayishBlue;
+}
+p {
+  font-size: var(--fs-description);
+  font-weight: 400;
+  color: $grayishBlue;
+  line-height: 1.5;
+}
